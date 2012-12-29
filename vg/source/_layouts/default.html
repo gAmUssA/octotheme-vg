@@ -1,0 +1,59 @@
+{% capture root_url %}{{ site.root | strip_slash }}{% endcapture %}
+
+{% include head.html %}
+
+<body {% if page.body_id %} id="{{ page.body_id }}" {% endif %} {% if page.sidebar == false %} class="no-sidebar" {% endif %} {% if page.sidebar == 'collapse' or site.sidebar == 'collapse' %} class="collapse-sidebar sidebar-footer" {% endif %}>
+
+  
+    <div class="topper">
+      <div class="container">
+
+        <hgroup class="brand">
+          {% include header.html %}
+        </hgroup>
+
+        <nav role="navigation" class="pull-right navi">
+          {% include navigation.html %}
+        </nav>
+
+ <!--        <div class="row-fluid">
+          <div class="span5">
+            <header role="banner">
+              <hgroup>
+                {% include header.html %}
+              </hgroup>
+            </header>
+          </div>
+
+          <div span="span7">
+            
+          </div>
+        </div> -->
+
+      </div>
+    </div>
+        
+
+    <div class="masthead visible-tablet visible-desktop">
+      <div class="container">
+        {% include masthead.html %}
+      </div>
+    </div>
+    
+    <div id="main">
+      <div class="container">
+        {{ content | expand_urls: root_url }}
+      </div>
+    </div>
+    
+    <footer role="contentinfo">
+      <div class="container">
+        {% include footer.html %}
+      </div>
+   	</footer>
+
+
+  {% include after_footer.html %}
+
+</body>
+</html>
