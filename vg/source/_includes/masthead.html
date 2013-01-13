@@ -1,2 +1,6 @@
-<h1>{{ site.greeting }}</h1>
-<small>{{ site.preamble }}</small>
+{% if site.greeting %}
+	<h1>{{ site.greeting }}</h1>
+{% endif %}
+{% if site.preamble %}
+	<small>{{ site.preamble }}</small>
+{% endif %}
