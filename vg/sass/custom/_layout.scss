@@ -1,17 +1,8 @@
 /*Override bg and font global defaults*/
 html,body{
 	background-color: $bright;
-	font-family: 'Quattrocento', serif;
 }
 
-h1,h2,h3,h4,h5,h6{
-	font-family: 'Source Sans Pro', sans-serif;
-	-webkit-text-shadow: 1px 2px 3px $light;
-	-moz-text-shadow: 1px 2px 3px $light;
-	-ms-text-shadow: 1px 2px 3px $light;
-	-o-text-shadow: 1px 2px 3px $light;
-	text-shadow: 1px 2px 3px $light;
-}
 
 #main{
 	margin: 1em auto;
@@ -191,12 +182,6 @@ article .pub-group{
 	.sidebar ul li{
 		border-bottom: dotted 1px $light;
 	}
-
-/*Override default header weights*/
-h1,h2,h3,h4,h5{
-	font-weight: 300;
-	color: $dark;
-}
 
 a{
 	color: $vg-mid;

@@ -1,24 +1,30 @@
 $blockquote: $type-border !default;
 $sans: "PT Sans", "Helvetica Neue", Arial, sans-serif !default;
-$serif: "PT Serif", Georgia, Times, "Times New Roman", serif !default;
+$serif: 'Quattrocento', serif;
 $mono: Menlo, Monaco, "Andale Mono", "lucida console", "Courier New", monospace !default;
-$heading-font-family: "PT Serif", "Georgia", "Helvetica Neue", Arial, sans-serif !default;
-$header-title-font-family: $heading-font-family !default;
-$header-subtitle-font-family: $heading-font-family !default;
+$heading-font-family: 'Quattrocento', serif;
+$header-title-font-family: $heading-font-family, serif !default;
+$header-subtitle-font-family: $heading-font-family, serif !default;
 
 // Fonts
 .heading {
-  font-family: $heading-font-family;
+  font-family: 'Source Sans Pro', sans-serif;
+  -webkit-text-shadow: 1px 2px 3px $light;
+  -moz-text-shadow: 1px 2px 3px $light;
+  -ms-text-shadow: 1px 2px 3px $light;
+  -o-text-shadow: 1px 2px 3px $light;
+  text-shadow: 1px 2px 3px $light;
+  font-weight: 300;
+  color: $dark;
 }
 .sans { font-family: $sans; }
 .serif { font-family: $serif; }
 .mono { font-family: $mono; }
 
 body > header h1 {
-  font-size: 2.2em;
+  font-size: 2em;
   @extend .heading;
   font-family: $header-title-font-family;
-  font-weight: normal;
   line-height: 1.2em;
   margin-bottom: 0.6667em;
 }
@@ -27,7 +33,7 @@ body > header h2 {
 }
 
 body {
-  line-height: 1.5em;
+  line-height: 1.2em;
   color: $text-color;
   @extend .serif;
 }
@@ -38,14 +44,13 @@ h1 {
 
 @media only screen and (min-width: 992px) {
   body { font-size: 1.15em; }
-  h1 { font-size: 2.6em; line-height: 1.2em; }
+  h1 { font-size: 2.2em; line-height: 1.2em; }
 }
 
 #{headings()}{
   @extend .heading;
   text-rendering: optimizelegibility;
   margin-bottom: 1em;
-  font-weight: bold;
 }
 h2, section h1 {
   font-size: 1.5em;
