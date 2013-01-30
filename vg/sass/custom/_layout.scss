@@ -133,7 +133,7 @@ article footer{
 }
 article h1{
 	margin: 0;
-	padding: .75em 0 0 0;
+	padding: 1.25em 0 0 0;
 }
 article .pub-group{
 	background: $dark;
@@ -158,6 +158,10 @@ article .pub-group{
 		vertical-align: middle;
 	}
 	@media (max-width: 767px){
+		article h1{
+			margin: 0;
+			padding: 0;
+		}
 		article .pub-group {
 			background: none;
 			color: $dark;
