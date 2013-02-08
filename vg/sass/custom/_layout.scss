@@ -123,10 +123,16 @@ html,body{
 	-webkit-border-radius: 5%;
 	-ms-border-radius: 5%;
 	border-radius: 5%;
-
 	box-shadow: 0 0 0 1px $medium, 0 0 0 2px $light, 0 3px 6px 0 $shadow;
-
 }
+
+.entry-content{
+	padding-top: 1em;
+	line-height: 1.5em;
+}
+	.entry-content ul{
+		margin-left: 1em;
+	}
 
 article footer{
 	margin: auto auto 3em auto;	
